@@ -1,6 +1,6 @@
 # Portfolio Renaud Vmb pour WordPress
 
-Ce projet est un site de portfolio pour un designer, créé dans le cadre d'un travail pour mes études à l'HEPL. Le site est construit sur la plateforme WordPress, avec un thème personnalisé et en utilisant PHP pour la programmation. Le logiciel PhpStorm a été utilisé comme environnement de développement. Le plugin Advanced Custom Fields (ACF) a été utilisé en version Pro pour la création de champs personnalisés.
+Ce projet est un site de portfolio, créé dans le cadre d'un travail pour mes études à l'HEPL. Le site est construit sur la plateforme WordPress, avec un thème personnalisé et en utilisant PHP pour la programmation. Le logiciel PhpStorm a été utilisé comme environnement de développement. Le plugin Advanced Custom Fields (ACF) a été utilisé en version Pro pour la création de champs personnalisés.
 
 ### Installation
 
