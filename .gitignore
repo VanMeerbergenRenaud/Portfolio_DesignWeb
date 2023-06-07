@@ -11,6 +11,7 @@
 /wp-content/themes/*
 !/wp-content/themes/portfolio
 /wp-content/themes/portfolio/public
+/wp-content/themes/portfolio/img
 
 /wp-content/plugins
 /wp-content/plugins/*
@@ -22,5 +23,4 @@
 /node_modules/*
 
 # Ignore all images
-/portfolio/img
-/portfolio/img/*
+
