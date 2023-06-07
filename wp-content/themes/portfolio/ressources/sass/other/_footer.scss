@@ -1,0 +1,73 @@
+/* Renaud Vmb */
+
+@import 'variables';
+@import "../effects/link-effect";
+
+.f {
+  padding: 2em;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  color: $text;
+  font-size: 0.875em;
+
+  &__list {
+    margin: 0 auto;
+    max-width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__link {
+      display: inline-block;
+
+      img {
+
+      }
+    }
+
+    .link__effect {
+      display: inline-block;
+      width: auto;
+      padding: 0.75rem;
+      color: rgb(104, 112, 118);
+      font-size: 0.875rem;
+    }
+  }
+
+  &__copyright {
+    color: #7b838e;
+
+    a {
+      color: #7b838e;
+    }
+  }
+}
+
+/* ----------------------
+      Media queries
+------------------------ */
+@media (min-width: 1000px) {
+  .f {
+    padding: 3.25rem 3.25rem 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list {
+      margin: 0;
+      max-width: 1600px;
+
+      &__link {
+        margin-right: 0.75rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1250px) {
+  .f {
+    padding: 3.25rem 6.5rem 1rem;
+  }
+}

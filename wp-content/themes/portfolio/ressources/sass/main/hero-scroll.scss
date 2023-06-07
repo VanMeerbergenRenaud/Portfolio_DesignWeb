@@ -1,0 +1,111 @@
+/* Renaud Vmb */
+
+@import "../other/variables";
+
+.hero__scroll {
+  margin: 0 auto;
+  width: 90%;
+  max-height: 300px;
+
+  &__bg {
+    /*border: 0.5em solid #222;
+    border-radius: 0.25em;
+    padding: 1em;*/
+    background-image: url("../../../img/desktop-mockup.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &__position {
+      padding: 0 1em 5em;
+
+      &__video {
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        border: 0.15em solid #eee;
+      }
+    }
+  }
+}
+
+/* ----------------------
+      Media queries
+------------------------ */
+@media (min-width: 500px) {
+  .hero__scroll {
+    max-height: 600px;
+
+    &__bg {
+      &__position {
+        padding: 0 1em 7.5em;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero__scroll {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 1000px;
+    max-height: 100%;
+    position: sticky;
+    top: 18vh;
+    z-index: -1;
+
+    &__bg {
+      background-image: url("../../../img/hero-scroll-bg.jpg");
+      max-height: 65vh;
+      border: 0.5em solid #161d2a;
+      border-radius: 0.5em;
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      overflow-y: hidden;
+      transform: rotate(0deg);
+      transform-origin: right top;
+
+      &__position {
+        min-width: 80%;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8vh 8vw;
+        overflow: hidden;
+
+        &__video, &__img {
+          height: auto;
+          width: 100%;
+          object-fit: cover;
+          border: none;
+          border-radius: 0.75em;
+        }
+        &__video {
+          margin-left: -3em;
+        }
+
+        &__img:last-of-type {
+          margin-left: 5em;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  .hero__scroll {
+    max-width: 1250px;
+    top: 18vh;
+
+    &__bg {
+      max-height: 75vh;
+
+      &__position {
+        min-width: 75%;
+      }
+    }
+  }
+}

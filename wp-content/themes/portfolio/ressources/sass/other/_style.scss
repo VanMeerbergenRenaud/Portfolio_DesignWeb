@@ -1,0 +1,91 @@
+/* Renaud Vmb */
+
+@import "variables";
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "SF Pro Display", "SF Pro Icons", "Inter Display", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 2000px;
+  color: white;
+  background-color: $bg-black;
+  scroll-behavior: smooth;
+  font-synthesis: none;
+  text-rendering: optimizeSpeed;
+}
+
+main {
+  /*overflow: hidden;*/
+}
+
+section {
+  background-color: $bg-black;
+  padding: 5em 1.25em;
+  text-align: center;
+}
+
+h2 {
+  color: rgb(236, 237, 238);
+  font-size: 2.5em;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 4rem;
+}
+
+p {
+  color: $text;
+  font-weight: 400;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  border: none;
+}
+
+abbr {
+  text-decoration: none;
+  border-bottom: 1px dotted #222;
+}
+
+.none {
+  display: none;
+}
+
+.hide {
+  display: block;
+}
+
+/* ----------------------
+      Media queries
+------------------------ */
+@media (min-width: 1000px) {
+  .none {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  main {
+    padding-top: 18vh;
+  }
+
+  h2 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 0 auto 7.5rem;
+    max-width: 550px;
+  }
+}

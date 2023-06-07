@@ -1,0 +1,164 @@
+/* Renaud Vmb */
+
+@import '../other/variables';
+
+.about {
+  position: relative;
+  padding-bottom: 0;
+  clip-path: inset(-1000px -1000px 1px -1000px);
+
+  &__zoom {
+    &__grid {
+      &__title {
+        margin-bottom: 0;
+      }
+
+      &__text {
+        margin: 1.5em 0 1em;
+        font-size: 1.125em;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+
+      &__link {
+        position: relative;
+        display: inline-block;
+        margin: 1em 0 0.5em;
+        padding: 1em 0.35em 0.25em 0.5em;
+        z-index: 3;
+        font-weight: 600;
+        color: whitesmoke;
+
+        svg {
+          position: absolute;
+          top: 1em;
+          left: -1.5em;
+          width: 1rem;
+          fill: whitesmoke;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          margin: -0.35em;
+          background-color: whitesmoke;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.4s ease-in-out 0s;
+        }
+
+        &:hover:before {
+          visibility: visible;
+          transform: scaleX(1);
+        }
+      }
+    }
+
+    &__img {
+      margin-top: 2em;
+      width: 90%;
+      max-width: 300px;
+      height: auto;
+      max-height: 350px;
+      border-top-left-radius: 1.125em;
+      border-top-right-radius: 1.125em;
+      background-color: rgba(12, 15, 23, 0.7);
+    }
+
+    &__bg {
+      position: absolute;
+      background: conic-gradient(from 180deg at 50% 50%, #0aefff -69.37deg, #0f83ff 31.88deg, #b056e7 120deg, #ff9966 204.37deg, #0aefff 290.63deg, #0f83ff 391.87deg);
+      filter: blur(150px);
+      opacity: .5;
+      height: 100vh;
+      width: 100%;
+      top: 280px;
+      left: 0;
+      z-index: -1;
+    }
+
+    &__img-overlay {
+      position: absolute;
+      left: -150%;
+      bottom: 0;
+      z-index: 2;
+      width: 250%;
+      height: 25%;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to($bg-black));
+      background-image: linear-gradient(180deg, transparent, $bg-black);
+    }
+  }
+}
+
+
+/* ----------------------
+      Media queries
+------------------------ */
+@media (min-width: 1000px) {
+  .about {
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    clip-path: inset(-1000px -1000px -1px -1000px);
+  }
+  .about__zoom {
+    scroll-snap-align: start;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 15vh 10vw;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 42.5%;
+    grid-template-rows: auto;
+    align-items: center;
+    text-align: left;
+    gap: 1em 4em;
+    clip-path: none;
+
+    &__bg {
+      width: 50%;
+      right: 0;
+      left: auto;
+      height: 25vh;
+      bottom: 15vh;
+      top: 20vh;
+    }
+
+    &__img-overlay {
+      position: absolute;
+      left: -150%;
+      bottom: 12.5vh;
+      z-index: 2;
+      width: 250%;
+      height: 20%;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to($bg-black));
+      background-image: linear-gradient(180deg, transparent, $bg-black);
+    }
+
+    &__grid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      &__title {
+        max-width: none;
+      }
+    }
+
+    &__img {
+      margin-top: 0;
+      width: 100%;
+      max-width: none;
+      max-height: 100%;
+    }
+
+    &__grid {
+      &__text {
+        letter-spacing: .01em;
+      }
+    }
+  }
+}

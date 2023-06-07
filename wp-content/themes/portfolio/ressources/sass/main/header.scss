@@ -1,0 +1,132 @@
+/* Renaud Vmb */
+
+@import "../other/variables";
+
+.header {
+  margin: 4.5em 0 2.5em;
+  padding: 0 1.25em;
+  text-align: center;
+  position: relative;
+
+  &__title {
+    position: relative;
+    margin: 0 auto 0.5em;
+    max-width: 335px;
+    color: rgb(255, 255, 255);
+    font-size: 3.5em;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.05em;
+
+    background: linear-gradient(60deg, #93f5ec 20%, #a77bf3 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: intro-gradient 1.8s ease backwards; /*infinite is cool also*/
+    animation-delay: 0.5s;
+  }
+
+  &__text {
+    margin: 1.5em 0;
+    font-size: 1.125em;
+    font-weight: 500;
+    line-height: 1.55;
+    color: #7a828d;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 0.5em 1.25em;
+    font-size: 1.125em;
+    font-weight: 700;
+    line-height: 1.2;
+    color: rgb(181, 196, 223);
+
+    img {
+      width: auto;
+      margin-left: 0.25em;
+    }
+  }
+}
+
+@keyframes intro-gradient {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* ----------------------
+      Media queries
+------------------------ */
+@media (min-width: 1000px) {
+  .header {
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 950px;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+
+    &__title, &__text, &__link {
+      max-width: 600px;
+    }
+
+    &__title {
+      font-size: 6.25em;
+    }
+
+    &__text {
+      font-size: 1.25em;
+      line-height: 1.5;
+    }
+
+    &__link {
+      font-size: 1.25em;
+    }
+  }
+}
+
+@media (min-width: 1250px) {
+  .header {
+    max-width: 1200px;
+    height: 66.5vh;
+
+    &__title, &__text, &__link {
+      max-width: 625px;
+    }
+
+    &__title {
+      font-size: 6.5em;
+      margin-bottom: 1.5rem;
+    }
+
+    &__link {
+      margin-top: 1.25rem;
+    }
+  }
+}
+@media (min-width: 1500px) {
+  .header {
+    max-width: 1200px;
+    height: 66.5vh;
+
+    &__title, &__text, &__link {
+      max-width: 815px;
+    }
+
+    &__title {
+      font-size: 8.5em;
+      margin-bottom: 1.5rem;
+    }
+
+    &__link {
+      margin-top: 1.25rem;
+    }
+  }
+}

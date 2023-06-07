@@ -1,0 +1,208 @@
+/* Renaud Vmb */
+
+@import '../other/variables';
+
+.footer {
+  padding: 1em 1.25em 2.5em;
+  background-color: white;
+
+  &__grid {
+
+    &__link__first {
+      position: relative;
+      isolation: isolate; /* Pour l'opacité de l'image en fond avec inset 0 */
+      display: block;
+      padding: 4.5em 1.125em;
+      background-color: $bg-black;
+      color: white;
+      border-radius: 1rem 1rem 0.75rem 0.75rem;
+      background-image: url("../../../img/macos-bg1.webp");
+      background-size: cover;
+      background-position: 50%;
+      background-repeat: no-repeat;
+
+      div {
+
+        .footer__link__first__text-1 {
+          font-size: 2rem;
+          line-height: 1.1;
+          font-weight: 500;
+          color: $light-white;
+        }
+
+        .footer__link__first__text-2 {
+          display: inline-block;
+          margin-top: 1.25rem;
+          padding: 0.5rem 1.25rem;
+          font-size: 1.125rem;
+          font-weight: 600;
+          color: $light-white;
+
+          img {
+            width: auto;
+            margin-left: 0.25em;
+          }
+        }
+
+        .footer__link__first__text-2:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    .footer__grid__link__first:hover {
+      background-image: url("../../../img/macos-bg2.webp");
+    }
+
+    .footer__grid__link__first:after {
+      border-radius: 1rem 1rem 0.75rem 0.75rem;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background-color: #14274d;
+      opacity: .25;
+      transition: .3s ease-in-out;
+    }
+
+    /*.footer__grid__link__first:hover:after {
+      opacity: .15;
+      border-radius: 1rem 1rem 0.75rem 0.75rem;
+      background-color: rgba(206, 209, 218, 0.5);
+    }*/
+
+    .footer__link__second {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      overflow: hidden;
+      margin-top: 1.25em;
+      padding-left: 1.8em;
+      height: 180px;
+      border-radius: 0.75em;
+      transition: box-shadow .2s;
+      border: 1px solid #eceef0;
+      background-color: rgb(248, 249, 250);
+
+      background-repeat: no-repeat;
+      background-position: right center;
+
+      .footer__link__second__container {
+        max-width: 150px;
+        min-width: 150px;
+
+        .footer__link__second__text1 {
+          font-size: 1.5rem;
+          font-weight: 500;
+          color: rgb(17, 24, 28);
+          margin-bottom: 0.75em;
+        }
+
+        .footer__link__second__text2 {
+          color: rgb(104, 112, 118);
+          font-size: 0.875em;
+          line-height: 1.35;
+        }
+      }
+    }
+
+    .footer__grid__img-1 {
+      background-size: auto 125%;
+      background-image: url("../../../img/test.png");
+    }
+
+    .footer__grid__img-2 {
+      background-size: auto 100%;
+      background-image: url("../../../img/about.png");
+    }
+
+    .footer__link__second:hover {
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .05), 0 4px 40px 0 rgba(0, 0, 0, .06);
+    }
+  }
+}
+
+/* ----------------------
+      Media queries
+------------------------ */
+@media (min-width: 1000px) {
+  .footer {
+    margin: 0 auto;
+    padding: 2em 5em;
+
+    &__grid {
+      margin: 0 auto;
+      max-width: 1600px;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 60vh auto;
+      gap: 0 1em;
+      grid-template-areas: "img img"
+                             "img img"
+                             "cta-left cta-right";
+
+      &__link__first {
+        grid-area: img;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem 1rem 0.75rem 0.75rem;
+
+        div {
+          max-width: 550px;
+
+          .footer__link__first__text-1 {
+            font-size: 3.5rem;
+          }
+
+          .footer__link__first__text-2 {
+            margin-top: 1.8em;
+            font-size: 1.25rem;
+          }
+        }
+      }
+
+      .footer__link__second {
+        padding-left: 3.125em;
+
+        &__container {
+          min-width: 225px;
+
+          .footer__link__second__text1 {
+            font-size: 1.6875rem;
+          }
+
+          .footer__link__second__text2 {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .footer__link__second:first-of-type {
+        grid-area: cta-left;
+      }
+
+      .footer__link__second:last-of-type {
+        grid-area: cta-right;
+      }
+    }
+  }
+}
+
+@media (min-width: 1250px) {
+  .footer {
+    padding: 2em 6.5em;
+    &__grid {
+      .footer__link__second {
+        &__container {
+          .footer__link__second__text1, .footer__link__second__text2 {
+            max-width: 400px;
+            min-width: 400px;
+          }
+        }
+      }
+    }
+  }
+}

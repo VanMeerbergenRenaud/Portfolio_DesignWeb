@@ -1,0 +1,35 @@
+/* Renaud Vmb */
+
+@import "reset";
+@import "utils";
+@import "style";
+@import "header";
+@import "footer";
+@import "footer-dark";
+@import "navigation";
+@import "variables";
+
+body {
+  main {
+    padding: 2.5em;
+  }
+  h2 {
+    margin-bottom: 1em;
+  }
+  .first {
+    margin-bottom: 1em;
+    color: whitesmoke;
+    font-size: 1.15rem;
+    font-weight: 500;
+  }
+  .second {
+    color: #bcbcbc;
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 1000px) {
+  .navigation {
+    position: relative;
+  }
+}

@@ -1,0 +1,92 @@
+/* Renaud Vmb */
+
+@import "../other/variables";
+
+.skills {
+  position: relative;
+  padding-top: 5.5em;
+
+  &__title, &__title-back {
+    position: relative;
+    transition: top 0.5s ease; /* Ajoute une transition fluide */
+    will-change: top;
+
+  }
+
+  &__title {
+    top: 0;
+    color: #ecedee;
+    margin-bottom: 0.75rem;
+  }
+
+  &__title-back {
+    top: 0;
+    color: #ecedee;
+    opacity: 0.15;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    line-height: 1.75;
+    color: rgb(134, 134, 139);
+    margin-bottom: 2.5rem;
+  }
+
+  /*&__flip {
+    min-height: 200px;
+    perspective: 1000px;
+
+    .card__inner {
+      transition: transform 1s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .card__inner.is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card__face {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      backface-visibility: hidden;
+      overflow: hidden;
+    }
+
+    .card__face--back {
+      transform: rotateY(180deg);
+    }
+
+    .front, .back {
+      border-radius: 0.5rem;
+    }
+  }*/
+}
+
+/* ----------------------
+      Media queries
+------------------------ */
+@media (min-width: 1000px) {
+  .skills {
+    margin: 0 auto;
+    padding: 7.5em 8em 5em;
+
+    &__text {
+      margin: 0 auto 4.5rem;
+      max-width: 700px;
+      font-size: 1.25rem;
+      line-height: 1.6;
+    }
+
+    /*&__flip {
+      min-height: 550px;
+
+      .card__face img {
+        max-width: 1000px;
+      }
+    }*/
+  }
+}

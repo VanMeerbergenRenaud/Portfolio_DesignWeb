@@ -1,0 +1,33 @@
+/* Renaud Vmb */
+
+@import "../other/variables";
+
+h2::-moz-selection {
+  color: $bg-black;
+  text-shadow: 0 0 0 #d2a4db, 0.0025em 0.0025em 0 #d2a4db, 0.005em 0.005em 0 #d2a4db, 0.0075em 0.0075em 0 #d2a4db, 0.01em 0.01em 0 #d2a4db, 0.0125em 0.0125em 0 #d2a4db, 0.015em 0.015em 0 #d2a4db, 0.0175em 0.0175em 0 #d2a4db, 0.02em 0.02em 0 #d2a4db, 0.0225em 0.0225em 0 #d2a4db, 0.025em 0.025em 0 #d2a4db, 0.0275em 0.0275em 0 #d2a4db, 0.03em 0.03em 0 #d2a4db, 0.0325em 0.0325em 0 #d2a4db, 0.035em 0.035em 0 #d2a4db, 0.0375em 0.0375em 0 #d2a4db, 0.04em 0.04em 0 #d2a4db, 0.0425em 0.0425em 0 #d2a4db, 0.045em 0.045em 0 #d2a4db, 0.0475em 0.0475em 0 #d2a4db, 0.05em 0.05em 0 #d2a4db, 0.0525em 0.0525em 0 #d2a4db, 0.055em 0.055em 0 #d2a4db, 0.0575em 0.0575em 0 #d2a4db, 0.06em 0.06em 0 #d2a4db, 0.0625em 0.0625em 0 #d2a4db, 0.065em 0.065em 0 #d2a4db, 0.0675em 0.0675em 0 #d2a4db, 0.07em 0.07em 0 #d2a4db, 0.0725em 0.0725em 0 #d2a4db, 0.075em 0.075em 0 #d2a4db, 0.0775em 0.0775em 0 #d2a4db, 0.08em 0.08em 0 #d2a4db, 0.0825em 0.0825em 0 #d2a4db, 0.085em 0.085em 0 #d2a4db, 0.0875em 0.0875em 0 #d2a4db, 0.09em 0.09em 0 #d2a4db, 0.0925em 0.0925em 0 #d2a4db, 0.095em 0.095em 0 #d2a4db, 0.0975em 0.0975em 0 #d2a4db, 0.1em 0.1em 0 #d2a4db;
+}
+
+h2::selection {
+  color: $bg-black;
+  text-shadow: 0 0 0 #d2a4db, 0.0025em 0.0025em 0 #d2a4db, 0.005em 0.005em 0 #d2a4db, 0.0075em 0.0075em 0 #d2a4db, 0.01em 0.01em 0 #d2a4db, 0.0125em 0.0125em 0 #d2a4db, 0.015em 0.015em 0 #d2a4db, 0.0175em 0.0175em 0 #d2a4db, 0.02em 0.02em 0 #d2a4db, 0.0225em 0.0225em 0 #d2a4db, 0.025em 0.025em 0 #d2a4db, 0.0275em 0.0275em 0 #d2a4db, 0.03em 0.03em 0 #d2a4db, 0.0325em 0.0325em 0 #d2a4db, 0.035em 0.035em 0 #d2a4db, 0.0375em 0.0375em 0 #d2a4db, 0.04em 0.04em 0 #d2a4db, 0.0425em 0.0425em 0 #d2a4db, 0.045em 0.045em 0 #d2a4db, 0.0475em 0.0475em 0 #d2a4db, 0.05em 0.05em 0 #d2a4db, 0.0525em 0.0525em 0 #d2a4db, 0.055em 0.055em 0 #d2a4db, 0.0575em 0.0575em 0 #d2a4db, 0.06em 0.06em 0 #d2a4db, 0.0625em 0.0625em 0 #d2a4db, 0.065em 0.065em 0 #d2a4db, 0.0675em 0.0675em 0 #d2a4db, 0.07em 0.07em 0 #d2a4db, 0.0725em 0.0725em 0 #d2a4db, 0.075em 0.075em 0 #d2a4db, 0.0775em 0.0775em 0 #d2a4db, 0.08em 0.08em 0 #d2a4db, 0.0825em 0.0825em 0 #d2a4db, 0.085em 0.085em 0 #d2a4db, 0.0875em 0.0875em 0 #d2a4db, 0.09em 0.09em 0 #d2a4db, 0.0925em 0.0925em 0 #d2a4db, 0.095em 0.095em 0 #d2a4db, 0.0975em 0.0975em 0 #d2a4db, 0.1em 0.1em 0 #d2a4db;
+}
+
+h3::selection {
+  color: #f5f5f5;
+  background-color: #505050;
+}
+
+h3::-moz-selection {
+  color: #f5f5f5;
+  background-color: #505050;
+}
+
+p::selection {
+  color: #222222;
+  background-color: gainsboro;
+}
+
+p::-moz-selection {
+  color: #222222;
+  background-color: gainsboro;
+}

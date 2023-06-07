@@ -1,0 +1,61 @@
+/* Renaud Vmb */
+
+@import '../other/variables';
+
+/* ----------------------
+      Media queries
+------------------------ */
+
+@media (min-width: 1000px) {
+  .scroll-down-l, .scroll-down-r {
+    display: none;
+  }
+}
+
+@media (min-width: 1350px) {
+  .scroll-down-l, .scroll-down-r {
+    position: absolute;
+    bottom: -40vh;
+    font-size: 0.94rem;
+    color: $light-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      font-weight: 600;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      animation: bounce2 1.5s linear infinite;
+    }
+
+    svg {
+      margin-top: 1em;
+      margin-right: 0.25rem;
+      width: 0.85em;
+    }
+  }
+
+  .scroll-down-l {
+    left: 7.5vw;
+  }
+
+  .scroll-down-r {
+    right: 7.5vw;
+  }
+
+  @keyframes bounce2 {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-15px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+/* Footer dark */
+
+@import "variables";
+
+.f {
+  background: $bg-black;
+  &__list {
+    .link__effect {
+      color: #bcbcbc;
+    }
+  }
+  &__copyright {
+    color: #bcbcbc;
+    a {
+      color: #bcbcbc;
+    }
+  }
+}

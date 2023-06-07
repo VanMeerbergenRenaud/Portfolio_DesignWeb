@@ -1,0 +1,209 @@
+/* Renaud Vmb */
+
+@import "../other/variables";
+
+.work {
+  background-color: #fbfcfd;
+
+  &__title {
+
+  }
+
+  &__row {
+
+    &__filter-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: -1.5em 0 2.5em;
+
+      &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        overflow-x: scroll;
+
+        &__item {
+          padding: 0.75em;
+          font-weight: 500;
+          transition: all 0.3s ease;
+
+          &__button {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #aaa;
+            text-transform: uppercase;
+            padding: 1em 1.5em;
+            background: #fff;
+            border: 0.1em solid #aaa;
+            text-shadow: 0 1px 0 #f5f5f5;
+            border-radius: 0.75em;
+            transform-style: preserve-3d;
+            transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+          }
+
+          &__button::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #f5f5f5;
+            border-radius: inherit;
+            box-shadow: 0 0 0.1em #aaa;
+            transform: translate3d(0, 0.75em, -1em);
+            transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+          }
+
+          &__button:focus::before, button.active::before {
+            background: #dddddd;
+            box-shadow: 0 0 0.1em #222;
+          }
+
+          &__button:hover {
+            background: #fff;
+            transform: translate(0, 0.25em);
+          }
+
+          &__button:hover::before {
+            box-shadow: 0 0 0.1em #8f8f8f;
+            transform: translate3d(0, 0.5em, -0.75em);
+          }
+
+          &__button:active {
+            background: #fff;
+            transform: translate(0em, 0.5em);
+          }
+
+          &__button:active::before {
+            box-shadow: 0 0 0.1em #8f8f8f;
+            transform: translate3d(0, 0, -0.75em);
+          }
+        }
+      }
+    }
+  }
+
+  &__grid {
+
+    &__project {
+      margin-bottom: 1.25em;
+      position: relative;
+      max-width: 900px;
+      overflow: hidden;
+      border-radius: 1.125rem;
+      background: linear-gradient(45deg, #9862f0 0%, #3dc5be 100%);
+      transition: 1s filter linear;
+
+      &__display {
+        position: relative;
+        overflow: hidden;
+        background-image: url("../../../img/work1.webp");
+        background-size: 82.5%;
+        background-repeat: no-repeat;
+        background-position: center 100%;
+        min-height: calc(80vw * 9 / 16);
+        transition: .2s cubic-bezier(.45, .02, .41, .99);
+      }
+      &__display:hover {
+        background-size: 100%;
+      }
+    }
+
+    &__project:nth-of-type(2) {
+      background: linear-gradient(45deg, #bd8e57 0%, #384588 100%);
+    }
+
+    &__project:nth-of-type(3) {
+      background: linear-gradient(45deg, #3a3c47 0%, #6b7077 100%);
+    }
+
+    &__project:nth-of-type(4) {
+      background: linear-gradient(45deg, #f4ba24 0%, #ed5456 100%);
+    }
+
+    &__project:nth-of-type(5) {
+      background: linear-gradient(45deg, #c29e88 0%, #afcadb 100%);
+    }
+
+    &__project:nth-of-type(6) {
+      background: linear-gradient(45deg, #4d929a 0%, #9f66ad 100%);
+    }
+
+    &__project:nth-of-type(7) {
+      background: linear-gradient(45deg, #b1b1b1 0%, #e3e3e3 100%);
+    }
+
+    &__project:nth-of-type(8) {
+      background: linear-gradient(45deg, #13234b 0%, #13234b 100%);
+    }
+
+    &__project:hover {
+      box-shadow: 0 0 0 1px #e6e8eb, 0 14px 45px 0 rgba(0, 0, 0, .25);
+    }
+
+    &__link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 1.5rem 3.5rem;
+      color: #006adc;
+      font-size: 1.125rem;
+      font-weight: 500;
+
+      svg {
+        margin-top: 0.75em;
+      }
+    }
+
+    &__link:hover {
+      scale: 1.05;
+    }
+  }
+}
+
+/* ----------------------
+      Media queries
+------------------------ */
+@media (min-width: 1000px) {
+  .work {
+    background-color: #fbfcfd;
+
+    &__grid {
+      margin: 0 auto;
+      max-width: 1200px;
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-flow: row dense;
+      gap: 1.8em;
+
+      &__project__display {
+        min-height: 300px;
+      }
+
+      &__link {
+        grid-column: 1 / span 2;
+      }
+    }
+
+    &__row {
+      &__filter-buttons {
+        margin: -2em 0 3.5em;
+
+        &__list {
+          &__item {
+            &__button {
+              font-size: 0.94rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

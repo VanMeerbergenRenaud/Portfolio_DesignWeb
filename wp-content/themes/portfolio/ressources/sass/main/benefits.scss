@@ -1,0 +1,472 @@
+/* Renaud Vmb */
+
+@import "../other/variables";
+
+.benefits {
+  position: relative;
+  color: #ecedee;
+
+  &__title {
+
+  }
+
+  &__bg-blur {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: blur(180px);
+
+    .benefits__bg-gradient {
+      background: conic-gradient(from 180deg at 50% 50%, #0aefff -69.37deg, #0f83ff 31.88deg, #b056e7 120deg, #ff9966 204.37deg, #0aefff 290.63deg, #0f83ff 391.87deg), #a84ddf;
+      position: absolute;
+      top: 600px;
+      bottom: 200px;
+      width: 100%;
+      max-width: 1000px;
+      opacity: .6;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, auto);
+    gap: 0.85em 0.5em;
+    grid-auto-flow: row dense;
+    grid-template-areas: "data1 data2"
+                             "data3 data4"
+                             "info1 info1"
+                             "info2 info2"
+                             "info3 info3"
+                             "info4 info4"
+                             "info5 info5"
+                             "info6 info6";
+
+    .card {
+      background-color: $bg-black;
+      position: relative;
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card::before {
+      border-radius: inherit;
+      content: "";
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      transition: opacity 300ms;
+      width: 100%;
+    }
+
+    .card::before {
+      background: radial-gradient(
+                      800px circle at var(--mouse-x) var(--mouse-y),
+                      rgba(255, 255, 255, 0.1),
+                      transparent 40%
+      );
+      z-index: 3;
+    }
+
+    .data {
+      position: relative;
+      padding: 3em 0.5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.625em;
+      border: 1px solid rgba(245, 245, 245, 0.25);
+      background-color: $bg-black;
+
+      p {
+        font-size: 2.5rem;
+        color: $light-white;
+
+        span {
+          font-size: 1.5rem;
+          margin-left: 0.25em;
+          position: absolute;
+        }
+      }
+
+      p + p {
+        text-transform: lowercase;
+        font-size: 0.94rem;
+        line-height: 1.125;
+        font-weight: 400;
+        margin-top: 0.5rem;
+      }
+    }
+
+    .data1 {
+      grid-area: data1;
+    }
+
+    .data2 {
+      grid-area: data2;
+    }
+
+    .data3 {
+      grid-area: data3;
+    }
+
+    .data4 {
+      grid-area: data4;
+    }
+
+    .info {
+      position: relative;
+      padding: 2.25em 1.75em;
+      text-align: left;
+      border-radius: 0.625em;
+      border: 1px solid rgba(245, 245, 245, 0.25);
+      background-color: $bg-black;
+
+      .info__title {
+        color: $light-white;
+        font-size: 1.75em;
+        line-height: 1.2;
+        font-weight: 500;
+        margin-bottom: 0.85rem;
+      }
+
+      .info__text {
+        font-size: 1.0625em;
+        line-height: 1.4;
+      }
+    }
+
+    .info1 {
+      grid-area: info1;
+    }
+
+    .info2 {
+      grid-area: info2;
+      padding-bottom: 63.25%;
+
+      .info__grid {
+        .info__img {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 30%;
+        }
+      }
+
+      .info__anim-video {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+
+        .test1 {
+          position: relative;
+          width: 100%;
+          padding-top: 63.25%;
+          border-style: solid none none solid;
+          border-width: 8px;
+          border-color: #080808;
+          border-top-left-radius: 7px;
+          background-image: url("https://assets.website-files.com/6279077bf697b924fac6e205/6323007e39f09a758cd95c94_anim-wallpaper.webp");
+          background-position: 50% 50%;
+          background-size: cover;
+
+          .test2, .test2 video {
+            position: absolute;
+            left: 5%;
+            top: 5%;
+            right: 1px;
+            bottom: 5%;
+            z-index: 1;
+            overflow: hidden;
+            border-radius: 0.5em;
+
+            video {
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .info3 {
+      grid-area: info3;
+      padding: 2.25em 1.75em 11rem;
+
+      .info__title {
+        margin-bottom: 0;
+      }
+
+      &__example-code {
+        position: absolute;
+        bottom: 1px;
+        right: 1px;
+        width: 90%;
+        border-top: 1px solid rgba(223, 239, 254, .14);
+        border-left: 1px solid rgba(223, 239, 254, .14);
+        border-radius: 0.5rem 0 0.5rem 0;
+        background-color: #0e181b;
+        background-image: linear-gradient(180deg, rgba(53, 73, 252, 0), rgba(53, 73, 252, .05));
+
+        &__img {
+          background-image: url("../../../img/work-code.png");
+          background-repeat: no-repeat;
+          background-position: bottom left;
+          background-size: contain;
+          height: 9em;
+          width: 100%;
+        }
+      }
+    }
+
+    .info4 {
+      grid-area: info4;
+      padding: 2.25em 1.75em;
+      overflow: hidden;
+      background-image: radial-gradient(circle farthest-side at 50% 100%, rgba(91, 136, 204, .2), rgba(91, 136, 204, 0));
+
+      .info__title {
+        padding-bottom: 2rem;
+        border-bottom: 1px solid rgba(245, 245, 245, 0.15);
+      }
+
+      .info__card-dev {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem 0 0;
+        font-size: 2.5rem;
+        font-weight: 500;
+        letter-spacing: -.025em;
+
+        .info__card-dev-months {
+          position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          line-height: 1.25;
+          opacity: .15;
+          margin-bottom: 0.25em;
+
+          .info__card-dev-month-line {
+            position: absolute;
+            top: 50%;
+            width: 50%;
+            height: 4px;
+            border-radius: 1.25rem;
+            background-color: #ececec;
+          }
+        }
+
+        .info__card-dev-week-line {
+          background-image: linear-gradient(58deg, #b94cdb, #fe815e);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          width: 100%;
+        }
+      }
+    }
+
+    .info5, .info6 {
+      padding-bottom: 21rem;
+      background-repeat: no-repeat;
+      background-size: auto 65%;
+    }
+
+    .info5 {
+      grid-area: info5;
+      background-image: url("../../../img/img-left.png");
+      background-position: right bottom;
+    }
+
+    .info6 {
+      grid-area: info6;
+      background-image: url("../../../img/img-right.png");
+      background-position: left bottom;
+    }
+  }
+
+  &__cursor {
+    position: relative;
+
+    .cursor__circle {
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 100;
+    }
+  }
+}
+
+/* ----------------------
+      Media queries
+------------------------ */
+@media (min-width: 1000px) {
+  .benefits {
+    padding: 8.5rem 3rem 10rem;
+
+    &__title {
+      font-size: 4rem;
+      line-height: 1.1;
+      margin: 0 auto 5.5rem;
+      max-width: 550px;
+    }
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(5, auto);
+      gap: 0.75rem;
+      grid-auto-flow: row dense;
+      grid-template-areas:
+            "data1 data2 info1 info1"
+            "data3 data4 info1 info1"
+            "info2 info2 info2 info2"
+            "info3 info3 info4 info4"
+            "info5 info5 info6 info6";
+
+      .info {
+        &__title {
+          font-size: 2em;
+        }
+
+        &__text {
+          font-size: 1.125em;
+          line-height: 1.5;
+        }
+      }
+
+      .info1 {
+        grid-area: info1;
+        padding: 3.625rem 4rem;
+      }
+
+      .info2 {
+        grid-area: info2;
+        padding: 3.625rem 0 0 4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px 8px;
+
+        .info__grid {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-bottom: 2.5em;
+
+          .info__text {
+            max-width: 400px;
+          }
+
+          .info__img {
+            position: absolute;
+            top: -25%;
+            right: -1em;
+            width: 30%;
+          }
+        }
+
+        .info__anim-video {
+          position: relative;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+        }
+      }
+
+      .info3 {
+        grid-area: info3;
+        padding: 3.625rem 0 0 4rem;
+
+        .info__title {
+          margin-bottom: 3rem;
+        }
+
+        &__example-code {
+          &__img {
+            height: 14.5em;
+          }
+        }
+      }
+
+      .info4 {
+        grid-area: info4;
+        padding: 3.625rem 4rem;
+
+        .info__title {
+          margin-bottom: 2rem;
+        }
+
+        .info__card-dev {
+          padding: 0;
+          font-size: 3.375rem;
+          .info__card-dev-months {
+            .info__card-dev-month-line {
+              height: 6px;
+            }
+          }
+        }
+      }
+
+      .info5 {
+        grid-area: info5;
+        padding: 3.625rem 0 0 4rem;
+      }
+
+      .info6 {
+        grid-area: info6;
+        padding: 3.625rem 4rem 0 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: end;
+        flex-direction: column;
+      }
+
+      .info5, .info6 {
+        padding-bottom: 16%;
+        background-size: auto 90%;
+
+        .info__title, .info__text {
+          max-width: 220px;
+          position: relative;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1350px) {
+  .benefits {
+      padding: 8.5rem 8rem 10rem;
+  }
+  .benefits .info1, .benefits .data {
+    padding: 4.5rem;
+  }
+  .benefits__grid .info .info__title {
+    font-size: 2em;
+    margin-bottom: 2.5rem;
+  }
+}

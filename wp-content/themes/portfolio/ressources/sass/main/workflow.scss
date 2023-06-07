@@ -1,0 +1,148 @@
+/* Renaud Vmb */
+
+@import "../other/variables";
+
+.workflow {
+  margin: 0 auto;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, $bg-black 25%, white 100%);
+
+  &__title {
+
+  }
+
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    &__wrapper {
+      margin: 0 auto;
+
+      &__card {
+        margin: 0 auto 15vh;
+        max-width: 700px;
+        text-align: left;
+        position: sticky;
+        padding: 2.625em 2em 3.25em;
+        background-color: $bg-black;
+        border-radius: 0.75em;
+        box-shadow: rgba(17, 24, 28, 0.1) 0 10px 10px;
+        border: 1px solid #343434;
+
+        &__number {
+          position: absolute;
+          left: auto;
+          top: 0;
+          right: 0;
+          bottom: auto;
+          padding: 1rem 1.5rem;
+          border-bottom-left-radius: 0.75rem;
+          color: $light-white;
+          background-color: $black;
+          font-size: 1.1em;
+        }
+
+        &__title {
+          font-size: 1.75rem;
+          margin-bottom: 0.75em;
+          font-weight: 500;
+        }
+
+        &__text {
+          color: rgb(104, 112, 118);
+          font-size: 1.0625rem;
+          line-height: 1.5;
+        }
+      }
+
+      &__card:nth-child(1n) {
+        top: 20vh;
+      }
+
+      &__card:nth-child(2n) {
+        top: 22vh;
+      }
+
+      &__card:nth-child(3n) {
+        top: 24vh;
+      }
+
+      &__card:nth-child(4n) {
+        top: 26vh;
+      }
+
+      &__card:nth-child(5n) {
+        top: 28vh;
+      }
+
+      &__card:nth-child(6n) {
+        top: 30vh;
+      }
+    }
+  }
+}
+
+/* ----------------------
+      Media queries
+------------------------ */
+@media (min-width: 1000px) {
+  .workflow {
+    padding: 0 10em;
+
+    &__grid {
+      /*min-height: 300vh;*/
+      max-width: 700px;
+      margin: 0 auto;
+
+      &__wrapper__card {
+        padding: 3.75em 3.125em 3.75em 200px;
+
+        &__number {
+          font-family: 'Suisse Works', sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 5.5rem;
+          width: 150px;
+          height: 100%;
+          padding: 0;
+          left: 0;
+          top: 0;
+          right: auto;
+          border-radius: 0.75rem 0 0 0.75rem;
+        }
+      }
+
+      &__wrapper {
+        margin: 0 auto;
+
+        &__card:nth-child(1n) {
+          top: 30vh;
+        }
+
+        &__card:nth-child(2n) {
+          top: 32vh;
+        }
+
+        &__card:nth-child(3n) {
+          top: 34vh;
+        }
+
+        &__card:nth-child(4n) {
+          top: 36vh;
+        }
+
+        &__card:nth-child(5n) {
+          top: 38vh;
+        }
+
+        &__card:nth-child(6n) {
+          top: 40vh;
+        }
+      }
+    }
+  }
+}

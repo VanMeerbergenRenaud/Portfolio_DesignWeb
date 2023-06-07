@@ -1,0 +1,57 @@
+/* Renaud Vmb */
+
+@import "reset";
+@import "utils";
+@import "header";
+@import "footer";
+@import "style";
+@import "navigation";
+@import "variables";
+
+body {
+  background-color: white;
+
+  .navigation {
+    position: relative;
+  }
+
+  .search {
+    background-color: white;
+
+    &__head {
+      margin: 0 auto 1.75em;
+      color: $bg-black;
+
+      em {
+        border-bottom: 3px solid $bg-black;
+      }
+    }
+
+    &__result {
+      color: $bg-black;
+    }
+
+    &__title {
+      margin-bottom: 1em;
+    }
+
+    &__excerpt {
+      margin-bottom: 1em;
+    }
+
+    &__link {
+      color: $bg-black;
+    }
+  }
+
+  .f {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .navigation {
+    position: relative;
+  }
+}

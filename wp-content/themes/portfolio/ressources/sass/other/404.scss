@@ -1,0 +1,152 @@
+/* Renaud Vmb */
+
+@import "reset";
+@import "utils";
+@import "style";
+@import "header";
+@import "footer";
+@import "footer-dark";
+@import "navigation";
+@import "variables";
+
+body {
+  margin: 0 auto;
+  text-align: center;
+  background-color: $bg-black;
+
+  .container-1 {
+    margin: 5em auto;
+    width: 80%;
+  }
+
+  .line {
+    fill: none;
+    stroke: whitesmoke;
+    stroke-width: 12;
+    stroke-dasharray: 200 100;
+  }
+
+  .anim {
+    animation: swirls 2s linear infinite;
+  }
+
+  @keyframes swirls {
+    from {
+      stroke-dashoffset: 0;
+    }
+    to {
+      stroke-dashoffset: 300;
+    }
+  }
+
+  .container-2 {
+    margin: 0 auto;
+
+    .error404__title {
+      font-size: 1.35rem;
+    }
+
+    .error404__text {
+      font-size: 1.25rem;
+      margin: 1.75em 0;
+      color: #999;
+    }
+
+    .error404__link {
+
+    }
+
+    .glow-on-hover {
+      padding: 1em;
+      color: whitesmoke;
+      position: relative;
+      top: 3em;
+      font-size: 1.15rem;
+      font-weight: 500;
+      border-radius: 1em;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .glow-on-hover:before {
+      content: '';
+      background: linear-gradient(45deg, #1f388d, #1e4982, #266e87, #489898, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      width: calc(100%);
+      height: calc(100%);
+      animation: glowing 15s linear infinite;
+      opacity: 0;
+      border-radius: 1em;
+    }
+
+    .glow-on-hover:active {
+      color: $bg-black;
+    }
+
+    .glow-on-hover:active:after {
+      background: transparent;
+    }
+
+    .glow-on-hover:hover:before {
+      opacity: 1;
+    }
+
+    .glow-on-hover:hover {
+      opacity: 1;
+      border: none;
+    }
+
+    .glow-on-hover:after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: $bg-black;
+      left: 0;
+      top: 0;
+      border-radius: 1em;
+    }
+
+    @keyframes glowing {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 400% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+  }
+
+  .f {
+    position: relative;
+    top: 8.5em;
+  }
+}
+
+/* ----------------------
+      Media queries
+------------------------ */
+@media (min-width: 1000px) {
+  body {
+
+    main {
+      padding: 5vh 0 7.5vh;
+    }
+
+    .navigation {
+      position: relative;
+    }
+
+    .container-1 {
+      width: 42.5%;
+    }
+  }
+}

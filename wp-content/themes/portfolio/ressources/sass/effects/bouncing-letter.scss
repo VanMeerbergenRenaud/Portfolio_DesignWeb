@@ -1,0 +1,44 @@
+/* Renaud Vmb */
+
+/* Inspiration effect : https://css-tricks.com/making-css-animations-feel-natural/ */
+
+.bounce {
+  animation-name: bounce;
+}
+
+.bouncing-letters span {
+  display: inline-block;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale3d(1, 1, 1); // Initial
+  }
+
+  25% {
+    transform: scale3d(1.25, 0.75, 1);// Effet 1
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);// Effet 1 inversé
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1); // Moyenne haut & bas en interchangeant (x,y)
+  }
+
+  60% {
+    transform: scale3d(0.95, 1.05, 1);// Effet 2
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);// Effet 2 inversé
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1); // Initial
+  }
+}
