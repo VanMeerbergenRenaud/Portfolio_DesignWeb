@@ -16,3 +16,4 @@
 /wp-content/plugins/*
 
 .DS_Store
+wp-content/themes/portfolio/ressources/.DS_Store
