@@ -11,3 +11,8 @@
 /wp-content/themes/*
 !/wp-content/themes/portfolio
 /wp-content/themes/portfolio/public
+
+/wp-content/plugins
+/wp-content/plugins/*
+
+.DS_Store
