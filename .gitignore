@@ -21,4 +21,6 @@
 /node_modules
 /node_modules/*
 
-/wp-content/themes/portfolio/public/img/*
+# Ignore all images
+/portfolio/img
+/portfolio/img/*
