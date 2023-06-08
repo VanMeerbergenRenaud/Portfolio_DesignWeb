@@ -2,17 +2,10 @@
 
 Ce projet est un site de portfolio, créé dans le cadre d'un travail pour mes études à l'HEPL. Le site est construit sur la plateforme WordPress, avec un thème personnalisé et en utilisant PHP pour la programmation. Le logiciel PhpStorm a été utilisé comme environnement de développement. Le plugin Advanced Custom Fields (ACF) a été utilisé en version Pro pour la création de champs personnalisés.
 
-### Installation
-
-- Clonez le repository sur votre ordinateur
-- Placez les fichiers dans le répertoire racine de votre serveur WordPress
-- Activez le thème Portfolio Renaud Vmb dans l'interface d'administration de WordPress
-- Installez le plugin Advanced Custom Fields Pro pour une meilleure expérience utilisateur
-- Installez les autres plugins recommandés pour une meilleure expérience utilisateur (liste ci-dessous)
-
 ### Fonctionnalités
 
 - Page principale : site one page avec un menu de navigation
+- Page projet : liste tous mes projets
 - Page contact : formulaire de contact
 
 ### Inspirations
@@ -23,7 +16,8 @@ Ce projet est un site de portfolio, créé dans le cadre d'un travail pour mes �
 
 - Advanced Custom Fields Pro pour la création de champs personnalisés
 - Polylang pour la traduction du site
-- Regenerate thumbnails pour la génération des vignettes
+- Regenerate Thumbnails pour la génération des vignettes
+- Contact Form 7 (uniquement si on ne souhaite pas créer un formulaire de contact 100% personnalisé)
 
 ### Auteur
 
