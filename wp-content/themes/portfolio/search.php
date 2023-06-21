@@ -5,7 +5,7 @@
             <article class="search__result">
                 <h3 class="search__title">Résultat : <?= get_the_title(); ?></h3>
                 <div class="search__excerpt"><?= get_the_excerpt(); ?></div>
-                <a href="<?= get_the_permalink(); ?>" class="search__link">
+                <a href="<?= get_the_permalink(); ?>" title="Vers <?= get_the_title(); ?>" class="search__link">
                     Voir le résultat <span>"<?= get_the_title(); ?>"</span>
                 </a>
             </article>

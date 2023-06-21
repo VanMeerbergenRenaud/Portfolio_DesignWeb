@@ -108,24 +108,26 @@ function hepl_execute_contact_form(): void
 
     (new ContactForm($config, $_POST))
         ->sanitize([
-            'firstname' => 'text_field',
-            'lastname' => 'text_field',
+            'nom et prénom' => 'text_field',
+            'entreprise' => 'text_field',
             'email' => 'email',
+            'phone' => 'text_field',
             'message' => 'textarea_field',
         ])
         ->validate([
-            'firstname' => ['required'],
-            'lastname' => ['required'],
+            'nom et prénom' => ['required'],
+            'entreprise' => [],
             'email' => ['required','email'],
-            'message' => [],
+            'phone' => [],
+            'message' => ['required'],
         ])
         ->save(
             title: fn($data) => $data['firstname'] . ' ' . $data['lastname'] . ' <' . $data['email'] . '>',
-            content: fn($data) => $data['message'],
+            content: fn($data) => 'Prénom: ' . $data['firstname'] . PHP_EOL . 'Nom: ' . $data['lastname'] . PHP_EOL . 'Email: ' . $data['email'] . PHP_EOL . 'Numéro de téléphone: ' . $data['phone'] . PHP_EOL . 'Message:' . PHP_EOL . $data['message'],
         )
         ->send(
             title: fn($data) => 'Nouveau message de ' . $data['firstname'] . ' ' . $data['lastname'],
-            content: fn($data) => 'Prénom: ' . $data['firstname'] . PHP_EOL . 'Nom: ' . $data['lastname'] . PHP_EOL . 'Email: ' . $data['email'] . PHP_EOL . 'Message:' . PHP_EOL . $data['message'],
+            content: fn($data) => 'Prénom: ' . $data['firstname'] . PHP_EOL . 'Nom: ' . $data['lastname'] . PHP_EOL . 'Email: ' . $data['email'] . PHP_EOL . 'Numéro de téléphone: ' . $data['phone'] . PHP_EOL . 'Message:' . PHP_EOL . $data['message'],
         )
         ->feedback();
 }
@@ -181,4 +183,17 @@ function capitaine_file_types($types, $file, $filename, $mimes)
     return $types;
 }
 
-/*dd(get_template_directory_uri());*/
+/* Attribut SRCSET */
+function add_srcset_to_images($content) {
+    // Vérifiez si le contenu est vide
+    if (empty($content)) {
+        return $content;
+    }
+
+    // Utilisez une expression régulière pour trouver toutes les balises <img>
+    $pattern = '/<img(.*?)src=[\'"](.*?)[\'"](.*?)>/i';
+    $replacement = '<img$1src="$2"$3 srcset="$2" $3>';
+    return preg_replace($pattern, $replacement, $content);
+}
+add_filter('the_content', 'add_srcset_to_images');
+add_filter('widget_text_content', 'add_srcset_to_images');

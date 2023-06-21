@@ -1,23 +1,18 @@
 # Portfolio Renaud Vmb pour WordPress
 
-Ce projet est un site de portfolio pour un designer, créé dans le cadre d'un travail pour mes études à l'HEPL. Le site est construit sur la plateforme WordPress, avec un thème personnalisé et en utilisant PHP pour la programmation. Le logiciel PhpStorm a été utilisé comme environnement de développement. Le plugin Advanced Custom Fields (ACF) a été utilisé en version Pro pour la création de champs personnalisés.
-
-### Installation
-
-- Clonez le repository sur votre ordinateur
-- Placez les fichiers dans le répertoire racine de votre serveur WordPress
-- Activez le thème Portfolio Renaud Vmb dans l'interface d'administration de WordPress
-- Installez le plugin Advanced Custom Fields Pro pour une meilleure expérience utilisateur
-- Installez les autres plugins recommandés pour une meilleure expérience utilisateur (liste ci-dessous)
+Ce projet est un site de portfolio, créé dans le cadre d'un travail pour mes études à l'HEPL. Le site est construit sur la plateforme WordPress, avec un thème personnalisé et en utilisant PHP pour la programmation. Le logiciel PhpStorm a été utilisé comme environnement de développement. Le plugin Advanced Custom Fields (ACF) a été utilisé en version Pro pour la création de champs personnalisés.
 
 ### Fonctionnalités
 
 - Page principale : site one page avec un menu de navigation
+- Page projets : affichage des projets avec un filtre par catégorie
 - Page contact : formulaire de contact
 
 ### Inspirations
 
 - Hero section et animations => https://www.wellingtoncollege.org.uk
+- Couleurs et dark thème => https://github.com
+- Page contact => https://www.bazil.fr
 
 ### Plugins recommandés
 

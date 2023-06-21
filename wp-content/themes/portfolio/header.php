@@ -7,6 +7,8 @@
     <meta name="author" content="<?= get_bloginfo('name'); ?>">
     <meta name="description" content="<?= get_bloginfo('description'); ?>">
 
+    <link rel="icon" href="https://renaud-vmb.com/favicon.ico" type="image/x-icon">
+
     <?php if (is_page('accueil')) : ?>
         <link rel="stylesheet" type="text/css" href="<?= get_stylesheet_directory_uri() . '/public/css/site.css'; ?>">
     <?php elseif (is_page('contact')) : ?>
@@ -24,10 +26,10 @@
     <title>
         <?php if (is_front_page()) {
             echo get_bloginfo('name');
-        } elseif (is_page('contact')) {
-            echo 'Contact - ' . get_bloginfo('name');
         } elseif (is_page('projets')) {
             echo 'Projets - ' . get_bloginfo('name');
+        } elseif (is_page('contact')) {
+            echo 'Contact - ' . get_bloginfo('name');
         } elseif (is_page('mentions-legales')) {
             echo 'Mentions Légales - ' . get_bloginfo('name');
         } elseif (is_search()) {
@@ -41,12 +43,12 @@
 <body>
     <!--[if IE]>
     <p class="browserupgrade">Vous utilisez un navigateur <strong> obsolète </strong>. Veuillez
-        <a href="https://browsehappy.com/"> mettre à niveau votre navigateur </a> pour améliorer votre expérience et votre sécurité.
+        <a href="https://browsehappy.com/" title="vers le site browsehappy"> mettre à niveau votre navigateur </a> pour améliorer votre expérience et votre sécurité.
     </p>
     <![endif]-->
     <p class="no-js__message">
         Pour accéder à toutes les fonctionnalités de ce site, vous devez activer JavaScript.
-        Voici les <a href="https://www.enable-javascript.com/fr/">
+        Voici les <a href="https://www.enable-javascript.com/fr/" title="vers le site enable-javascript">
         instructions pour activer JavaScript dans votre navigateur Web</a>.
     </p>
     <header class="hidden">

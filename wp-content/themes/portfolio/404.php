@@ -23,7 +23,7 @@
         <div class="container-2">
             <h1 class="error404__title">Page non trouvée...</h1>
             <p class="error404__text">Vous êtes perdu&nbsp;?</p>
-            <a href="<?= get_home_url(); ?>" class="error404__link glow-on-hover">
+            <a href="<?= get_home_url(); ?>" title="Retour à l'accueil" class="error404__link glow-on-hover">
                 Retourner à l'accueil
             </a>
         </div>
