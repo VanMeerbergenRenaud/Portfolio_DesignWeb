@@ -7,17 +7,23 @@
     <div class="benefits__grid" id="cards">
         <?php
         $data = array(
-            array("class" => "data1", "count" => "50", "label" => "Happy clients"),
-            array("class" => "data2", "count" => "100", "label" => "Customers clients"),
-            array("class" => "data3", "count" => "32", "label" => "yolo clients"),
-            array("class" => "data4", "count" => "24", "label" => "Baby clients")
+            array("class" => "data1", "count" => "5", "label" => "Languages de programmation"),
+            array("class" => "data2", "count" => "10", "label" => "Projets réalisés"),
+            array("class" => "data3", "count" => "2 ans", "label" => "d'expérience"),
+            array("class" => "data4", "count" => "100", "label" => "Passion")
         );
         ?>
 
-        <?php foreach ($data as $item) { ?>
+        <?php foreach ($data as $key => $item) { ?>
             <div class="data <?= $item['class']; ?> card">
                 <p>
-                    <?= $item['count']; ?><span>+</span>
+                    <?php if ($key < 2) { ?>
+                        <?= $item['count']; ?><span>+</span>
+                    <?php } elseif ($key == count($data) - 1) { ?>
+                        <?= $item['count']; ?><span>%</span>
+                    <?php } else { ?>
+                        <?= $item['count']; ?>
+                    <?php } ?>
                 </p>
                 <p><?= $item['label']; ?></p>
             </div>
@@ -26,22 +32,18 @@
         <!--second section-->
         <div class="info info1 card">
             <h3 class="info__title"><?= get_field('info1_title'); ?></h3>
-            <p class="info__text">
-                <?= get_field('info1_text'); ?>
-            </p>
+            <p class="info__text"><?= get_field('info1_text'); ?></p>
         </div>
         <div class="info info2 card">
             <div class="info__grid">
                 <h3 class="info__title"><?= get_field('info2_title'); ?></h3>
-                <p class="info__text panel">
-                    <?= get_field('info2_text'); ?>
-                </p>
-                <img src="<?= get_field('info2_image'); ?>" alt="" class="info__img">
+                <p class="info__text panel"><?= get_field('info2_text'); ?></p>
+                <img src="<?= get_field('info2_image'); ?>" alt="logo de Renaud Van Meerbergen" class="info__img">
             </div>
             <div class="info__anim-video">
                 <div class="test1">
                     <div class="test2">
-                        <video loop="" muted="" playsinline="" autoplay="">
+                        <video loading="lazy" loop="" muted="" playsinline="" autoplay="">
                             <source src="<?= get_field('info2_video'); ?>" type="video/mp4">
                         </video>
                     </div>

@@ -8,14 +8,11 @@
         </div>
 
         <?php
-        // Get the FAQ items from ACF
         $faq_items = get_field('faq-items');
 
-        // Check if there are any FAQ items
         if ($faq_items) {
             echo '<ul id="accordion" class="faq__grid__list accordion">';
 
-            // Loop through the FAQ items
             foreach ($faq_items as $faq_item) {
                 $question_id = sanitize_title($faq_item['question']);
                 $question_label = esc_html($faq_item['question']);
@@ -28,17 +25,16 @@
                 ?>
 
                 <li class="faq__grid__list__item">
-                    <input type="checkbox" name="accordion" id="<?php echo $question_id; ?>" class="faq__grid__list__item__input">
-                    <label for="<?php echo $question_id; ?>" class="faq__grid__list__item__label">
-                        <?php echo $question_label; ?>
+                    <input type="checkbox" name="accordion" id="<?= $question_id; ?>" class="faq__grid__list__item__input">
+                    <label for="<?= $question_id; ?>" class="faq__grid__list__item__label">
+                        <?= $question_label; ?>
                     </label>
                     <p class="faq__grid__list__item__text content">
-                        <?php echo $answer; ?>
+                        <?= $answer; ?>
                     </p>
                 </li>
                 <?php
             }
-
             echo '</ul>';
         }
         ?>

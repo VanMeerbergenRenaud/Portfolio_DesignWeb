@@ -7,7 +7,7 @@
             $images = get_field('sponsor-gallery'); // récupère les images de la galerie
             if ($images):
                 foreach ($images as $image): ?>
-                    <img src="<?= esc_url($image); ?>" class="sponsor__slider__track__img" alt=""/>
+                    <img src="<?= esc_url($image); ?>" class="sponsor__slider__track__img" alt="logo de mes divers outils"/>
                 <?php endforeach;
             endif;
             ?>

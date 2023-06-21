@@ -9,7 +9,7 @@
                 // Dupliquer les images pour créer un effet de boucle infinie
                 $duplicated_images = array_merge($images, $images);
                 foreach ($duplicated_images as $image): ?>
-                    <img src="<?= esc_url($image); ?>" class="sponsor__slider__track__img" alt=""/>
+                    <img src="<?= esc_url($image); ?>" class="sponsor__slider__track__img" alt="logo de mes divers outils"/>
                 <?php endforeach;
             endif;
             ?>

@@ -2,7 +2,7 @@
 <section class="footer">
     <h2 class="hidden">Requête de projet</h2>
     <div class="footer__grid">
-        <a href="/contact" class="footer__grid__link__first parallax">
+        <a href="https://renaud-vmb.com/contact" class="footer__grid__link__first parallax" title="Vers la page contact">
             <div>
                 <p class="footer__link__first__text-1">
                     <?= get_field('footer-first-cta') ?>
@@ -13,7 +13,7 @@
                 </p>
             </div>
         </a>
-        <a href="" class="footer__link__second footer__grid__img-1">
+        <a href="https://first-portfolio.renaud-vmb.com" title="vers mon premier portfolio" class="footer__link__second footer__grid__img-1">
             <div class="footer__link__second__container">
                 <p class="footer__link__second__text1">
                     <?= get_field('footer-second-cta') ?>
@@ -23,7 +23,7 @@
                 </p>
             </div>
         </a>
-        <a href="" class="footer__link__second footer__grid__img-2">
+        <a href="https://cv.renaud-vmb.com" title="vers ma page cv" class="footer__link__second footer__grid__img-2">
             <div class="footer__link__second__container">
                 <p class="footer__link__second__text1">
                     <?= get_field('footer-third-cta') ?>
