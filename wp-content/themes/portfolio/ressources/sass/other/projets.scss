@@ -3,7 +3,6 @@
 @import "reset";
 @import "utils";
 @import "style";
-@import "header";
 @import "footer";
 @import "footer-dark";
 @import "navigation";
@@ -21,17 +20,22 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 1.5em;
+    padding: 0 1.5em;
     overflow: scroll;
     z-index: 10;
 
     &__title {
       color: #ecedee;
+      padding: 2rem 0;
       font-size: 2.5em;
       font-weight: 600;
       margin-bottom: 0.5rem;
       text-transform: uppercase;
       height: auto;
+
+      background: linear-gradient(60deg, #93f5ec 20%, #a77bf3 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .word {
@@ -120,7 +124,7 @@ body {
       font-weight: 500;
       line-height: 1.38;
       color: whitesmoke;
-      margin: 2rem 0;
+      margin: 0 0 2em;
     }
 
     &__cta {
@@ -276,14 +280,10 @@ body {
 }
 
 @media (min-width: 1000px) {
-  .navigation {
-    position: relative;
-  }
-
   body {
 
     .projets {
-      padding: 5em 8.5em 1.5em;
+      padding: 8.5em 8.5em 1.5em;
 
       &__title {
         margin: 0 auto;

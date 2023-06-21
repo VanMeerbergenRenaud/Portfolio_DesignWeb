@@ -3,33 +3,68 @@
 @import "reset";
 @import "utils";
 @import "style";
-@import "header";
 @import "footer";
 @import "footer-dark";
 @import "navigation";
 @import "variables";
 
-body {
-  main {
-    padding: 2.5em;
+.notice {
+  padding: 2.5em 1.5em;
+
+  &__title {
+    margin: 0 auto 1em;
   }
-  h2 {
-    margin-bottom: 1em;
-  }
-  .first {
-    margin-bottom: 1em;
+
+  &__subtitle {
+    margin: 2.5em auto 0.75em;
     color: whitesmoke;
-    font-size: 1.15rem;
+    font-size: 1.375rem;
     font-weight: 500;
+    line-height: 1.2;
   }
-  .second {
+
+  &__text {
     color: #bcbcbc;
-    line-height: 1.25;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 0 0.75em;
+    letter-spacing: .01em;
+
+    li {
+      list-style-type: disc;
+      margin-left: 1em;
+    }
+
+    a {
+      color: #bcbcbc;
+      border-bottom: 1px solid #bcbcbc;
+    }
   }
 }
 
 @media (min-width: 1000px) {
-  .navigation {
-    position: relative;
+  .notice {
+    padding: 12em 15em 3em 10em;
+
+    &__title {
+      font-size: 3em;
+      margin: 0 0 1.5em;
+    }
+
+    &__subtitle {
+      font-size: 1.5rem;
+    }
+
+    &__text {
+      max-width: 650px;
+      font-size: 1rem;
+      margin-bottom: 0.85em;
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  .notice {
+    padding: 12em 25em 3em 32em;
   }
 }

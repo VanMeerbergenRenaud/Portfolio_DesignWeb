@@ -215,7 +215,6 @@
   }
 }
 
-
 /* SVG hover element */
 .rotate-animation {
   animation: rotate .5s linear backwards;
@@ -279,5 +278,11 @@
   }
   .navigation__menu button {
     margin-right: 0.5rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .navigation {
+    max-width: 1400px;
   }
 }

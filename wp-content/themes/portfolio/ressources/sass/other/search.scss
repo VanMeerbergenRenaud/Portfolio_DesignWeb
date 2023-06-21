@@ -2,7 +2,6 @@
 
 @import "reset";
 @import "utils";
-@import "header";
 @import "footer";
 @import "style";
 @import "navigation";
@@ -47,11 +46,18 @@ body {
   .f {
     position: absolute;
     bottom: 0;
+    width: 85%;
   }
 }
 
 @media (min-width: 1000px) {
-  .navigation {
-    position: relative;
+  body {
+    .navigation {
+      position: absolute;
+    }
+
+    .search {
+      margin-top: 10em;
+    }
   }
 }

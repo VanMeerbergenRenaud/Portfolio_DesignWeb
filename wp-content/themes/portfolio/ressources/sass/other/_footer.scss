@@ -21,8 +21,10 @@
     &__link {
       display: inline-block;
 
-      img {
-
+      .svg-github {
+        width: 3.5rem;
+        height: 1rem;
+        margin-left: 1.5em;
       }
     }
 
