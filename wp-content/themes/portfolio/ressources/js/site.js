@@ -24,15 +24,14 @@ let index = 0;
 function animatePanels(panel) {
     const str = panel.innerHTML.toString();
     let i = 0;
-
     panel.textContent = "";
 
     setTimeout(function() {
-        const se = setInterval(function() {
+        const set = setInterval(function() {
             i++;
             panel.innerHTML = str.substr(0, i) + "<span class='benefits__cursor'>|</span>";
             if (i === str.length) {
-                clearInterval(se);
+                clearInterval(set);
                 panel.textContent = str;
             }
         }, 25);
@@ -65,7 +64,7 @@ panels.forEach((panel) => {
     observer.observe(panel);
 });
 
-// Effet de parallax sur l'élément d'id "parallax"
+// Effet de parallax footer sur l'élément d'id "parallax"
 const elem = document.querySelector(".parallax");
 function parallax(e) {
     let w = window.innerWidth/1.5;
@@ -97,95 +96,17 @@ for (const lettre of lettres) {
     }
 }
 
-document.querySelectorAll(".bouncing-letters>span").forEach((element) => {
-    element.addEventListener("mouseover", (e) => bounce(e.target));
+const spanLetter = document.querySelectorAll(".bouncing-letters>span");
+spanLetter.forEach((element) => {
+    element.addEventListener("mouseover", (e) => bounce(e.currentTarget));
 });
 
-function bounce(letter) {
-    if (!letter.classList.contains("bounce")) {
-        letter.classList.add("bounce");
-        setTimeout(
-            function () {
-                letter.classList.remove("bounce");
-            },
-            1000
-        );
-    }
+function bounce(element) {
+    element.classList.add("bounce");
+    element.addEventListener("animationend", () => {
+        element.classList.remove("bounce");
+    }, { once: true });
 }
-
-// JavaScript to handle tabbed navigation
-const filterBtns = document.querySelectorAll('[data-target]'); // Get all filter buttons
-let projects = document.querySelectorAll('.work__grid__project'); // Get all projects
-let activeBtn = null; // Track the currently active filter button
-
-// Add click event listeners to all filter buttons
-filterBtns.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-        const target = btn.getAttribute('data-target'); // Get the target filter
-        filterProjects(target, btn);
-    });
-
-    // Add keydown event listeners to all filter buttons
-    btn.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-            event.preventDefault();
-            const target = btn.getAttribute('data-target'); // Get the target filter
-            filterProjects(target, btn);
-        } else if (event.key === 'ArrowLeft' && index > 0) {
-            event.preventDefault();
-            const prevBtn = filterBtns[index - 1]; // Get the previous filter button
-            prevBtn.focus();
-            filterProjects(prevBtn.getAttribute('data-target'), prevBtn);
-        } else if (event.key === 'ArrowRight' && index < filterBtns.length - 1) {
-            event.preventDefault();
-            const nextBtn = filterBtns[index + 1]; // Get the next filter button
-            nextBtn.focus();
-            filterProjects(nextBtn.getAttribute('data-target'), nextBtn);
-        }
-    });
-});
-
-function filterProjects(target, btn) {
-    // Loop through all projects and show/hide them based on the target filter
-    projects.forEach((project) => {
-        const id = project.getAttribute('data-id'); // Get the project's data-id attribute
-
-        if (target === 'all' || id === target) {
-            project.style.display = 'block'; // Show the project
-        } else {
-            project.style.display = 'none'; // Hide the project
-        }
-    });
-
-    // Remove the active class from all filter buttons
-    filterBtns.forEach((btn) => {
-        btn.classList.remove('active');
-    });
-
-    // Add the active class to the clicked filter button
-    btn.classList.add('active');
-
-    // Set focus to the clicked filter button
-    btn.focus();
-
-    // Update the active filter button
-    activeBtn = btn;
-}
-
-// Add keydown event listener to the document for arrow key navigation
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowLeft' && activeBtn && activeBtn.previousElementSibling) {
-        event.preventDefault();
-        const prevBtn = activeBtn.previousElementSibling;
-        prevBtn.focus();
-        filterProjects(prevBtn.getAttribute('data-target'), prevBtn);
-    } else if (event.key === 'ArrowRight' && activeBtn && activeBtn.nextElementSibling) {
-        event.preventDefault();
-        const nextBtn = activeBtn.nextElementSibling;
-        nextBtn.focus();
-        filterProjects(nextBtn.getAttribute('data-target'), nextBtn);
-    }
-});
 
 // Add a height on the hero__scroll section if viewport(width) >= 1000px
 let heroScroll = document.querySelector('.hero__scroll');
@@ -213,7 +134,7 @@ toggleAllBtn.addEventListener('click', () => {
 });
 
 /* BackEnd section */
-function initTabs() {
+/*function initTabs() {
     setupTabs();
 }
 
@@ -240,8 +161,7 @@ function openTabs(e) {
     document.querySelector(`#${language}`).classList.add('active');
     btnTarget.classList.add('active');
 }
-
-initTabs();
+initTabs();*/
 
 // Arrow following link
 const arrow = document.querySelector('.arrow');
@@ -259,5 +179,3 @@ function rotateArrow(event) {
 }
 
 body.addEventListener('mousemove', rotateArrow);
-
-

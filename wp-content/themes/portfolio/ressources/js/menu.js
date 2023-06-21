@@ -28,7 +28,7 @@ searchBar.addEventListener("click", (e) => {
 document.addEventListener("keydown", (e) => {
     if ((e.metaKey || e.ctrlKey) && e.key === "k") {
         searchBar.classList.toggle("hidden");
-        const audio = new Audio('../sounds/search.mp3');
+        const audio = new Audio("https://renaud-vmb.com/wp-content/themes/portfolio/public/sounds/search.mp3");
         audio.play();
         animateSearchBar();
         e.preventDefault();
@@ -37,8 +37,8 @@ document.addEventListener("keydown", (e) => {
 
 // Ajout d'un son aux boutons du menu
 const buttons = [/* ATTENTION valeurs écrites en dure */
-    { element: document.getElementById('search__button'), sound: "http://design-web-portfolio.test/wp-content/themes/portfolio/public/sounds/search.mp3" },
-    { element: document.getElementById('menu__button'), sound: "http://design-web-portfolio.test/wp-content/themes/portfolio/public/sounds/menu.mp3" }
+    { element: document.getElementById('search__button'), sound: "https://renaud-vmb.com/wp-content/themes/portfolio/public/sounds/search.mp3" },
+    { element: document.getElementById('menu__button'), sound: "https://renaud-vmb.com/wp-content/themes/portfolio/public/sounds/menu.mp3" }
 ];
 
 buttons.forEach(button => {

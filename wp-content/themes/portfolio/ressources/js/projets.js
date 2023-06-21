@@ -19,5 +19,3 @@ spansLetter.forEach((span, idx) => {
         span.classList.add('active');
     }, 750 * (idx+1))
 });
-
-// Image hover effect
