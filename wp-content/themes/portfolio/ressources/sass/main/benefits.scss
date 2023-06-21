@@ -188,7 +188,7 @@
             position: absolute;
             left: 5%;
             top: 5%;
-            right: 1px;
+            right: 0;
             bottom: 5%;
             z-index: 1;
             overflow: hidden;
@@ -346,6 +346,12 @@
             "info3 info3 info4 info4"
             "info5 info5 info6 info6";
 
+      .data {
+        p + p {
+          font-size: 1.15rem;
+        }
+      }
+
       .info {
         &__title {
           font-size: 2em;
@@ -422,6 +428,7 @@
         .info__card-dev {
           padding: 0;
           font-size: 3.375rem;
+
           .info__card-dev-months {
             .info__card-dev-month-line {
               height: 6px;
@@ -460,7 +467,7 @@
 
 @media (min-width: 1350px) {
   .benefits {
-      padding: 8.5rem 8rem 10rem;
+    padding: 8.5rem 8rem 10rem;
   }
   .benefits .info1, .benefits .data {
     padding: 4.5rem;
@@ -468,5 +475,17 @@
   .benefits__grid .info .info__title {
     font-size: 2em;
     margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .benefits {
+    padding: 8.5rem 12.5rem 10rem;
+  }
+}
+
+@media (min-width: 1750px) {
+  .benefits {
+    padding: 8.5rem 15rem 10rem;
   }
 }

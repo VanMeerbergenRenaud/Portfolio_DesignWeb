@@ -57,7 +57,8 @@
 
     &__bg {
       background-image: url("../../../img/hero-scroll-bg.jpg");
-      max-height: 65vh;
+      /*max-height: 65vh;*/
+      max-height: 525px;
       border: 0.5em solid #161d2a;
       border-radius: 0.5em;
       display: flex;
@@ -73,16 +74,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 8vh 8vw;
+        padding: 2.5em 7.5em;
         overflow: hidden;
 
         &__video, &__img {
           height: auto;
           width: 100%;
+          /*width: 750px;
+          height: 400px;*/
           object-fit: cover;
           border: none;
           border-radius: 0.75em;
         }
+
         &__video {
           margin-left: -3em;
         }
@@ -97,14 +101,23 @@
 
 @media (min-width: 1500px) {
   .hero__scroll {
-    max-width: 1250px;
-    top: 18vh;
+    max-width: 1200px;
+    top: 25vh;
 
     &__bg {
-      max-height: 75vh;
+      /*max-height: 75vh;*/
+      max-height: 600px;
+      padding: 1em 1em;
 
       &__position {
         min-width: 75%;
+      }
+
+      &__position:first-of-type {
+        margin-left: 3em;
+      }
+      &__position:last-of-type {
+        margin-right: 3em;
       }
     }
   }
