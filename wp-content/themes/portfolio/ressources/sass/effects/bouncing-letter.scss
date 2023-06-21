@@ -15,30 +15,30 @@
 
 @keyframes bounce {
   0% {
-    transform: scale3d(1, 1, 1); // Initial
+    transform: scale(1, 1); // Initial
   }
 
   25% {
-    transform: scale3d(1.25, 0.75, 1);// Effet 1
+    transform: scale(1.25, 0.75);// Effet 1
   }
 
   40% {
-    transform: scale3d(0.75, 1.25, 1);// Effet 1 inversé
+    transform: scale(0.75, 1.25);// Effet 1 inversé
   }
 
   50% {
-    transform: scale3d(1.15, 0.85, 1); // Moyenne haut & bas en interchangeant (x,y)
+    transform: scale(1.15, 0.85); // Moyenne haut & bas en interchangeant (x,y)
   }
 
   60% {
-    transform: scale3d(0.95, 1.05, 1);// Effet 2
+    transform: scale(0.95, 1.05);// Effet 2
   }
 
   75% {
-    transform: scale3d(1.05, 0.95, 1);// Effet 2 inversé
+    transform: scale(1.05, 0.95);// Effet 2 inversé
   }
 
   100% {
-    transform: scale3d(1, 1, 1); // Initial
+    transform: scale(1, 1); // Initial
   }
 }
